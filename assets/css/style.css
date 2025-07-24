@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f4f4f4;
+  --background-color-header: #0e3c55;
+  --background-color-card: #fff;
+  --background-color-footer: #343a40;
+  --text-color: #333;
+  --text-color-contrast: #fff;
+  --shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--background-color-header);
+  color: var(--text-color-contrast);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+main {
+  padding: 25px;
+}
+
+section {
+  margin: auto;
+}
+
+#formulário {
+  min-height: 100vh;
+}
+
+#reciboForm {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--background-color-card);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: var(--text-color-contrast);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+#recibo {
+  display: none;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--background-color-card);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  margin: 25px;
+}
+
+#recibo p {
+  text-align: justify;
+  margin: 25px;
+}
+
+#assinaturas p {
+  text-align: center;
+}
+
+#Rodapé {
+  bottom: 0;
+}
+
+#Rodapé p {
+  text-align: center;
+}
+
+#reciboDetails {
+  margin: 25px;
+  display: none;
+}
+
+#printButton {
+  background-color: var(--primary-color);
+  color: var(--text-color-contrast);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: auto;
+  padding: 10px 15px;
+  width: 75%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 25px 0;
+  color: var(--text-color-contrast);
+  background-color: var(--background-color-footer);
+}

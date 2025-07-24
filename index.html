@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Recibos</title>
+    <link rel="stylesheet" href="assets/css/style.css" media="screen" />
+    <link rel="stylesheet" href="assets/css/print.css" media="print" />
+  </head>
+  <body>
+    <header>
+      <nav><h2>Gerador de Recibos</h2></nav>
+    </header>
+    <main>
+      <section id="formulário">
+        <form method="post" id="reciboForm">
+          <label for="nomeCliente">Nome do Cliente:</label>
+          <input type="text" id="nomeCliente" name="nomeCliente" required />
+          <br />
+          <label for="valor">Valor:</label>
+          <input
+            type="number"
+            name="valor"
+            id="valor"
+            placeholder="R$ 0,00"
+            required
+          />
+          <br />
+          <label for="descrição">Descrição:</label>
+          <input
+            type="text"
+            name="descrição"
+            placeholder="Descrição do serviço ou produto"
+            id="descrição"
+            required
+          />
+          <br />
+          <label for="validade">Validade:</label>
+          <input type="date" name="validade" id="validade" required />
+          <br />
+          <label for="motivo">Motivo:</label>
+          <input
+            type="text"
+            name="motivo"
+            placeholder="Motivo do recibo"
+            id="motivo"
+            required
+          />
+          <br />
+          <label for="cidade">Cidade:</label>
+          <input
+            type="text"
+            name="cidade"
+            placeholder="Cidade"
+            id="cidade"
+            required
+          />
+          <br />
+          <button type="submit">Gerar Recibo</button>
+        </form>
+      </section>
+      <section id="recibo"></section>
+      <aside id="reciboDetails">
+        <button onclick="window.print()" id="printButton">Imprimir</button>
+      </aside>
+    </main>
+    <footer>
+      <p>Todos os direitos reservados - Gerador de Recibos</p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
