@@ -1,1 +1,1 @@
-# receipt_generator
+# Receipt Generator

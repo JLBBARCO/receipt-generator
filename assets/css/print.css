@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+#formulário,
+header,
+aside,
+footer {
+  display: none;
+}
+
+#recibo {
+  display: block;
+}
