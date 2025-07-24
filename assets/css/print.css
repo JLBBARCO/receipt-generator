@@ -1,6 +1,19 @@
 @charset "UTF-8";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.5;
+  margin: 3cm 2cm 2cm 3cm;
+}
+
 #formulário,
+#reciboDetails button,
 header,
 aside,
 footer {
@@ -9,4 +22,22 @@ footer {
 
 #recibo {
   display: block;
+}
+
+h1 {
+  text-align: center;
+  margin: 1cm 0 5cm;
+}
+
+#assinaturas {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+}
+
+#Rodapé {
+  width: 75%;
+  margin: auto;
+  position: fixed;
+  text-align: center;
 }
