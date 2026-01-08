@@ -19,13 +19,18 @@
 }
 
 body {
+  scrollbar-color: var(--primary-color);
   font-family: Arial, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.5;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 75px 1fr 50px;
 }
 
 header {
+  grid-area: 1 / 1 / 1 / -1;
   background-color: var(--background-color-header);
   color: var(--text-color-contrast);
   padding: 20px;
@@ -33,16 +38,13 @@ header {
   box-shadow: var(--shadow);
 }
 
-main {
+main,
+aside {
   padding: 25px;
 }
 
-section {
-  margin: auto;
-}
-
-#formulário {
-  min-height: 100vh;
+main {
+  grid-area: 2 / 1 / -2 / -1;
 }
 
 #reciboForm {
@@ -77,7 +79,7 @@ form button {
   width: 100%;
 }
 
-#recibo {
+#reciboDetails {
   display: none;
   max-width: 600px;
   margin: auto;
@@ -92,7 +94,12 @@ h1 {
   margin: 25px;
 }
 
-#recibo p {
+aside {
+  grid-area: 2 / 2 / 3 / 3;
+  display: none;
+}
+
+aside p {
   text-align: justify;
   margin: 25px;
 }
@@ -101,11 +108,11 @@ h1 {
   text-align: center;
 }
 
-#Rodapé {
+#rodape {
   bottom: 0;
 }
 
-#Rodapé p {
+#rodape p {
   text-align: center;
 }
 
@@ -122,13 +129,25 @@ h1 {
   border-radius: 5px;
   margin: auto;
   padding: 10px 15px;
-  width: 75%;
+  width: 100%;
 }
 
 footer {
+  grid-area: -1 / 1 / -1 / -1;
   text-align: center;
   margin-top: 20px;
   padding: 25px 0;
   color: var(--text-color-contrast);
   background-color: var(--background-color-footer);
+}
+
+@media (max-width: 990px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr 1fr 50px;
+  }
+
+  aside {
+    grid-area: 3 / 1 / 4 / 2;
+  }
 }

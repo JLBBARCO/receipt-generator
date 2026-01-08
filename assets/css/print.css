@@ -7,20 +7,20 @@
 }
 
 body {
+  display: block;
   font-family: "Times New Roman", Times, serif;
   line-height: 1.5;
   margin: 3cm 2cm 2cm 3cm;
 }
 
-#formulário,
-#reciboDetails button,
+form,
+button,
 header,
-aside,
 footer {
   display: none;
 }
 
-#recibo {
+aside {
   display: block;
 }
 
@@ -35,7 +35,7 @@ h1 {
   text-align: center;
 }
 
-#Rodapé {
+#rodape {
   width: 75%;
   margin: auto;
   position: fixed;
